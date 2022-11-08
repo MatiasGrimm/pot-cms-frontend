@@ -1,1 +1,1 @@
-# FE-POT-CMS
+# POTSHOP
