@@ -4,7 +4,7 @@ import store from '@/store/index';
 
 Vue.use(VueRouter);
 
-const DEFAULT_TITLE = 'Cubic';
+const DEFAULT_TITLE = 'Potshop';
 
 const routes = [
   {
@@ -180,11 +180,11 @@ const routes = [
     name: 'ResetPassword',
     component: () => import('../views/ResetPassword.vue'),
   },
-  {
-    path: '/activate',
-    name: 'Activate',
-    component: () => import('../views/ActivateAccount.vue'),
-  },
+  // {
+  //   path: '/activate',
+  //   name: 'Activate',
+  //   component: () => import('../views/ActivateAccount.vue'),
+  // },
 ];
 
 const router = new VueRouter({

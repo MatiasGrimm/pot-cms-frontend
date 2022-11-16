@@ -24,12 +24,12 @@
         </v-btn>
       </template>
     </v-snackbar>
-    <v-app-bar app elevation="0" :src="require('@/assets/headerBackground.png')" fade-img-on-scroll>
+    <v-app-bar app elevation="0" >
       <template v-slot:img="{ props }">
         <v-img v-bind="props" gradient="to top right, rgba(255,255,255,.5), rgba(200,200,200,.8)"></v-img>
       </template>
       <div class="d-flex align-center">
-        <v-img alt="CUBIC Logo" class="shrink mr-2" contain :src="require('@/assets/logo.png')" transition="scale-transition" width="80" />
+        
       </div>
       <v-spacer />
       <div class="ml-auto">
@@ -74,7 +74,7 @@
       <router-view />
     </v-main>
     <v-footer app absolute>
-      <div class="text-center mx-auto">CUBIC Licensing System © 2022 <a href="https://cubic.eu" target="_blank">CUBIC</a></div>
+      <div class="text-center mx-auto">CUBIC Licensing System © 2022 <a href="https://potshop.eu" target="_blank">CUBIC</a></div>
     </v-footer>
   </v-app>
 </template>
