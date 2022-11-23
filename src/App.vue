@@ -47,19 +47,12 @@
         </v-menu>
       </div>
       <template v-slot:extension v-if="isAuthenticated">
-        <v-tabs align-with-title>
-          <v-tab v-if="isManager" :to="{ name: 'UserList' }">Users</v-tab>
-          <v-tab v-if="isAdmin" :to="{ name: 'CompanyList' }">Companies</v-tab>
-          
-          <v-tab v-if="isAdmin" :to="{ name: 'ApplicationReleaseList' }">Releases</v-tab>
-          <v-tab v-if="isAdmin" :to="{ name: 'ApplicationElementList' }">Elements</v-tab>
-          <v-tab v-if="isAdmin" :to="{ name: 'License' }">Licenses</v-tab>
-          <v-tab v-if="isAdmin" :to="{ name: 'UpdateCheckLog' }">Update Log</v-tab>
-          <v-tab v-if="isAdmin" :to="{ name: 'UpdateDownloadLog' }">Download Log</v-tab>
-          <v-tab v-if="isAdmin" :to="{ name: 'ApplicationList' }">Applications</v-tab>
-          <v-tab v-if="isAdmin" :to="{ name: 'SqlScriptList' }">SQL Scripts</v-tab>
-          <v-tab v-if="isAdmin" :to="{ name: 'Configuration' }">Configurations</v-tab>
-          <v-tab v-if="isAdmin" :to="{ name: 'ConfigurationFileList' }">Configuration Files</v-tab>
+        <v-tabs grow >
+          <v-tab v-if="isAdmin" :to="{ name: 'InventoryList' }">Inventory</v-tab>
+          <v-tab v-if="isAdmin" :to="{ name: 'SaleHistoryList' }">Sales</v-tab>
+          <v-tab v-if="isManager" :to="{ name: 'StaffList' }">Staff</v-tab>
+          <v-tab v-if="isAdmin" :to="{ name: 'ProductList' }">Products</v-tab>
+          <v-tab v-if="isAdmin" :to="{ name: 'LocationList' }">Locations</v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
@@ -74,7 +67,7 @@
       <router-view />
     </v-main>
     <v-footer app absolute>
-      <div class="text-center mx-auto">CUBIC Licensing System © 2022 <a href="https://potshop.eu" target="_blank">CUBIC</a></div>
+      <div class="text-center mx-auto">Potshop Licensing System © 2022 <a href="https://potshop.dk" target="_blank">Potshop</a></div>
     </v-footer>
   </v-app>
 </template>

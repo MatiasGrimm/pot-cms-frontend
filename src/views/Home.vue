@@ -2,10 +2,10 @@
   <v-container fill-height class="d-flex">
     <v-card v-if="!isAuthenticated" class="mx-auto" width="500"><login-dialog /></v-card>
     <v-card v-else class="mx-auto" width="500">
-      <v-card-title>CUBIC Licensing System</v-card-title>
+      <v-card-title>Potshop Licensing System</v-card-title>
       <v-card-text>
         <p>
-          Welcome to the CUBIC Licensing System.
+          Welcome to the Potshop Licensing System.
         </p>
       </v-card-text>
     </v-card>

@@ -17,6 +17,66 @@ const routes = [
     component: () => import('../views/AdminPanel.vue'),
     // redirect: '/admin/users',
     children: [
+      {
+        path: 'inventory',
+        name: 'InventoryList',
+        component: () => import('../components/List/InventoryList.vue'),
+        children: [
+          // {
+          //   path: ':Id',
+          //   name: 'UserDetails',
+          //   component: () => import('../components/Admin/Details/UserDetails.vue'),
+          // },
+        ],
+      },
+      {
+        path: 'sales',
+        name: 'SaleHistoryList',
+        component: () => import('../components/Admin/List/SaleHistoryList.vue'),
+        children: [
+          // {
+          //   path: ':Id',
+          //   name: 'UserDetails',
+          //   component: () => import('../components/Admin/Details/UserDetails.vue'),
+          // },
+        ],
+      },
+      {
+        path: 'staff',
+        name: 'StaffList',
+        component: () => import('../components/Admin/List/StaffList.vue'),
+        children: [
+          // {
+          //   path: ':Id',
+          //   name: 'UserDetails',
+          //   component: () => import('../components/Admin/Details/UserDetails.vue'),
+          // },
+        ],
+      },
+      {
+        path: 'products',
+        name: 'ProductList',
+        component: () => import('../components/Admin/List/ProductList.vue'),
+        children: [
+          // {
+          //   path: ':Id',
+          //   name: 'UserDetails',
+          //   component: () => import('../components/Admin/Details/UserDetails.vue'),
+          // },
+        ],
+      },
+      {
+        path: 'locations',
+        name: 'LocationList',
+        component: () => import('../components/Admin/List/LocationList.vue'),
+        children: [
+          // {
+          //   path: ':Id',
+          //   name: 'UserDetails',
+          //   component: () => import('../components/Admin/Details/UserDetails.vue'),
+          // },
+        ],
+      },
     //   {
     //     path: 'users',
     //     name: 'UserList',

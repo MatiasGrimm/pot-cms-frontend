@@ -5,7 +5,7 @@
       <v-card-text>
         <v-row no-gutters>
           <v-col cols="12" md="6" class="px-2">
-            <v-text-field v-model.trim="username" :rules="[rules.required]" label="Username" @ />
+            <v-text-field v-model.trim="username" :rules="[rules.required]" label="Brugernavn"/>
           </v-col>
           <v-col cols="12" md="6" class="px-2">
             <v-text-field
@@ -50,7 +50,7 @@ export default {
     showPassword: false,
     errorMessage: null,
     rules: {
-      required: (value) => !!value || 'Field cannot be empty.',
+      required: (value) => !!value || 'Felt må ikke være tomt',
     },
   }),
   methods: {
