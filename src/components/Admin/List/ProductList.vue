@@ -14,6 +14,11 @@
       <template #[`item.isDisabled`]="{ item }">
         <readonly-checkbox :value="item.isDisabled" />
       </template>
+      <template #[`item.actions`]="{ item }">
+        <v-btn icon @click="editProduct(item)">
+          <v-icon>mdi-pencil</v-icon>
+        </v-btn>
+      </template>
     </v-data-table>
     <createEditProduct @update-procut-list="getProducts()" ref="createEditProductRef" />
   </v-container>
@@ -45,6 +50,10 @@ export default {
         text: 'Disabled',
         value: 'isDisabled',
       },
+      {
+        text: '',
+        value: 'actions',
+      },
     ],
   }),
   computed: {
@@ -62,7 +71,10 @@ export default {
       this.loading = false;
     },
     showDetails(item) {
-      this.$refs.createEditProductRef.details(item);
+      console.log('Show details for ', item);
+    },
+    editProduct(item) {
+      this.$refs.createEditProductRef.editProduct(item);
     },
     addProduct() {
       this.$refs.createEditProductRef.createProduct();
