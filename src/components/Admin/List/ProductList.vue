@@ -12,7 +12,7 @@
     </v-row>
     <v-data-table @click:row="showDetails" :headers="headers" :items="products" v-if="!detailsView" :search="search">
       <template #[`item.isDisabled`]="{ item }">
-        <readonly-checkbox :value="!item.isDisabled" />
+        <readonly-checkbox :value="item.isDisabled" />
       </template>
     </v-data-table>
     <createEditProduct @update-procut-list="getProducts()" ref="createEditProductRef" />
@@ -61,9 +61,8 @@ export default {
 
       this.loading = false;
     },
-    showDetails() {
-      // this.$router.push({ name: 'UserDetails', params: { Id: user.id } });
-      console.log('No Details yet');
+    showDetails(item) {
+      this.$refs.createEditProductRef.details(item);
     },
     addProduct() {
       this.$refs.createEditProductRef.createProduct();
