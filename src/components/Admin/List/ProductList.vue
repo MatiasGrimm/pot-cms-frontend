@@ -27,7 +27,7 @@
 <script>
 import apiService from '@/services/apiService.js';
 import ReadonlyCheckbox from '@/components/ReadonlyCheckbox.vue';
-import createEditProduct from '../Dialogs/CreateEditProductDialogs.vue';
+import createEditProduct from '../Dialogs/CreateEditProductDialog.vue';
 
 export default {
   name: 'ProductList',
