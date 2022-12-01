@@ -5,7 +5,7 @@ import router from '@/router';
 
 const service = {
   api: process.env.VUE_APP_API_URL,
- 
+
   async getOptions(inOptions) {
     if (!inOptions?.noAuth && store.getters.user && DateTime.fromISO(store.getters.user.expires) < DateTime.now()) {
       console.log('token expired, refreshing');
@@ -144,9 +144,14 @@ const service = {
 
   //Product endpoints
   getProducts(showAll) {
-    return this.get('product', { params: { showAll: showAll } })
-  }
-
+    return this.get('product', { params: { showAll: showAll } });
+  },
+  getProduct(id) {
+    return this.get(`product/${id}`);
+  },
+  createOrEditProduct(product) {
+    return this.put(`product`, product);
+  },
 };
 
 export default service;
