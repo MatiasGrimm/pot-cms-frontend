@@ -77,10 +77,6 @@ export default {
       this.$emit('update-procut-list');
       this.show = false;
     },
-    details(product) {
-      this.show = true;
-      this.currentProduct = _.cloneDeep(product);
-    },
     editProduct(product) {
       this.show = true;
       this.currentProduct = _.cloneDeep(product);
