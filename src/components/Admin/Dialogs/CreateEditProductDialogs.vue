@@ -80,13 +80,11 @@ export default {
     details(product) {
       this.show = true;
       this.currentProduct = _.cloneDeep(product);
-      console.log(this.currentProduct);
     },
     editProduct(product) {
       this.show = true;
       this.currentProduct = _.cloneDeep(product);
       this.name = this.currentProduct.name;
-      console.log(this.name);
     },
     createProduct() {
       this.currentProduct = {
